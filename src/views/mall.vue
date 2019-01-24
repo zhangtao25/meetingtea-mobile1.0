@@ -12,6 +12,20 @@
     width: .5rem;
   }
 
+  #home .icon-buycar{
+    position: fixed;
+    right: 1rem;
+    bottom: 2rem;
+    width: 2rem;
+    height: 2rem;
+    color: white;
+    text-align: center;
+    line-height: 2rem;
+    background-color: black;
+    opacity: .8;
+    border-radius: 50%;
+  }
+
   @keyframes turn {
     0% {
       transform: rotate(0deg);
@@ -23,6 +37,7 @@
 </style>
 <template>
   <div id="home">
+    <i @click="goToBuycar" class="icon-buycar iconfont"></i>
     <header>
       <top-search></top-search>
       <slide-nav-bar
@@ -46,8 +61,8 @@
   </div>
 </template>
 <script>
-  import TopSearch from './../components/top-search'
-  import SlideNavBar from './../components/slide-nav-bar'
+  import TopSearch from '../widget/top-search'
+  import SlideNavBar from '../widget/slide-nav-bar'
   import Goods from './../service/goods'
 
   export default {
@@ -93,6 +108,9 @@
           this.$refs.loadmore.onTopLoaded();
         }, 1500)
       },
+      goToBuycar(){
+        this.$router.push({path:'/buycar'})
+      }
     }
   }
 </script>

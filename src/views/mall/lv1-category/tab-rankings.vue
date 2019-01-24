@@ -48,7 +48,7 @@
   </div>
 </template>
 <script>
-  import CommonTitle from './../../../components/common-title'
+  import CommonTitle from '../../../widget/common-title'
 
   export default {
     components: {

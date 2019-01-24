@@ -1,0 +1,34 @@
+html{
+  font-size: 37.5px;
+}
+:root{
+  --main-color: #b4282d;
+  --main-bg: rgb(255, 255, 255);
+  --logo-border-color: rebeccapurple;
+
+  --header-height: 68px;
+  --content-padding: 10px 20px;
+
+  --base-line-height: 1.428571429;
+  --transition-duration: .35s;
+  --external-link: "external link";
+  --margin-top: calc(2vh + 20px);
+}
+
+@font-face {
+  font-family: 'iconfont';  /* project id 1030624 */
+  src: url('//at.alicdn.com/t/font_1030624_3dxofxoyi77.eot');
+  src: url('//at.alicdn.com/t/font_1030624_3dxofxoyi77.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1030624_3dxofxoyi77.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1030624_3dxofxoyi77.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1030624_3dxofxoyi77.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1030624_3dxofxoyi77.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:1rem;
+  font-style:normal;
+}
+
+.icon-buycar:before{ content: "\e605" }
