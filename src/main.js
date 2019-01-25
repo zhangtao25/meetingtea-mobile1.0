@@ -1216,6 +1216,12 @@ Vue.prototype.testData = {
   ]
 }
 
+// console.log(process.env.NODE_ENV==='development')
+if (process.env.NODE_ENV==='development'){
+  // console.log(VUE_APP_BASE_API)
+
+}
+
 Vue.config.productionTip = false
 
 new Vue({

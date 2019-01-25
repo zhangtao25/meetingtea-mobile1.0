@@ -1,12 +1,8 @@
 import axios from 'axios'
 
-let host = 'http://101.132.46.146:3030';
-let local_host = 'http://localhost:3030';
-let api = local_host
-
 function getLv1CateList(categoryId) {
   return new Promise((resolve, reject) => {
-    axios.get(api + '/mobile-goods/lv1-list', {params: {categoryId}}).then((res) => {
+    axios.get('/api/mobile-goods/lv1-list', {params: {categoryId}}).then((res) => {
       resolve(res)
     }, (err) => {
       console.log(err)
@@ -16,7 +12,7 @@ function getLv1CateList(categoryId) {
 
 function getLv2CateList(categoryId, subCategoryId) {
   return new Promise((resolve, reject) => {
-    axios.get(api + '/mobile-goods/lv2-list', {params: {categoryId, subCategoryId}}).then((res) => {
+    axios.get('/api/mobile-goods/lv2-list', {params: {categoryId, subCategoryId}}).then((res) => {
       resolve(res)
     }, (err) => {
       console.log(err)
@@ -26,7 +22,7 @@ function getLv2CateList(categoryId, subCategoryId) {
 
 function getGoodsDetail(id) {
   return new Promise((resolve, reject) => {
-    axios.get(api + '/mobile-goods/detail', {params: {id}}).then((res) => {
+    axios.get('/api/mobile-goods/detail', {params: {id}}).then((res) => {
       resolve(res)
     }, (err) => {
       console.log(err)
@@ -36,7 +32,7 @@ function getGoodsDetail(id) {
 
 function getLv1Category(id) {
   return new Promise((resolve, reject) => {
-    axios.get(api + '/mobile-goods/lv1-category', {params: {id}}).then((res) => {
+    axios.get('/api/mobile-goods/lv1-category', {params: {id}}).then((res) => {
       resolve(res)
     }, (err) => {
       console.log(err)
@@ -46,7 +42,7 @@ function getLv1Category(id) {
 
 function getHomepage() {
   return new Promise((resolve, reject) => {
-    axios.get(api + '/mobile-goods/homepage').then((res) => {
+    axios.get('/api/mobile-goods/homepage').then((res) => {
       resolve(res)
     }, (err) => {
       console.log(err)
