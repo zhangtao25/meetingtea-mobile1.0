@@ -8,8 +8,6 @@
 <template>
   <div id="testhome">
     <image-text-item v-for="(item,index) of imageTextData" :image-text-data="item" :key="index"></image-text-item>
-    <p>kdhcdhckfdgvjdfhgvjdfhgvjhdfg</p>
-    <p>cdcdcfdvc</p>
   </div>
 </template>
 <script>

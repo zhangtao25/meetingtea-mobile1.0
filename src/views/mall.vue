@@ -14,15 +14,16 @@
 
   #home .icon-buycar{
     position: fixed;
-    right: 1rem;
+    right: .5rem;
     bottom: 2rem;
-    width: 2rem;
-    height: 2rem;
+    width: 1.2rem;
+    height: 1.2rem;
     color: white;
+    font-size: .8rem;
     text-align: center;
-    line-height: 2rem;
+    line-height: 1.2rem;
     background-color: black;
-    opacity: .8;
+    opacity: .6;
     border-radius: 50%;
   }
 
@@ -79,11 +80,15 @@
     },
     mounted() {
       this.initCateList();
+      setTimeout(()=>{
+        this.$router.push({path: '/mall/lv1-category', query: {id:40}})
+      },500)
     },
     methods: {
       onClickNavBar(val) {
         let jump_url = val.data.jump_url
         let id = jump_url.slice(jump_url.length - 2, jump_url.length)
+        console.log(id)
         if (val.floor_id == 0) {
           this.$router.push({path: '/mall/recommend'})
         } else {
