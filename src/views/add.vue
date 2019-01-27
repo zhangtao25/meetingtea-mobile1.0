@@ -32,11 +32,12 @@
       },
       fn(val){
         console.log(val)
-      axios.post('/api/mobile-goods/picture',{
-        file:val.file})
-          .then(response=>{
-            console.log(response.data);
-          })
+        let formData = new FormData();
+        formData.append('avatar', val.file);
+        axios.post('/api/mobile-picture/uploader',formData)
+            .then(response=>{
+              console.log(response.data);
+            })
       }
     }
   }
