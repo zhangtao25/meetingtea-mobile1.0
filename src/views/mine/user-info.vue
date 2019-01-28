@@ -103,14 +103,20 @@
         imageUrl:''
       }
     },
+    mounted(){
+      axios.get('/api/mobile-picture/init-touxiang').then(res=>{
+        console.log(res)
+        this.imageUrl = this.backendInterfaceAddress + res.data
+      })
+    },
     methods:{
       fn(val){
         console.log(val)
         let formData = new FormData();
         formData.append('avatar', val.file);
         axios.post('/api/mobile-picture/uploader',formData).then(res=>{
-          console.log(res)
-          this.imageUrl = res.data.filePath
+          // console.log(res,this.backendInterfaceAddress)
+          this.imageUrl = this.backendInterfaceAddress + res.data.filePath
         })
       }
     }

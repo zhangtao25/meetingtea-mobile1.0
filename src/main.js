@@ -1221,9 +1221,11 @@ Vue.prototype.testData = {
 }
 
 // console.log(process.env.NODE_ENV==='development')
-if (process.env.NODE_ENV==='development'){
-  // console.log(VUE_APP_BASE_API)
 
+if (process.env.NODE_ENV==='development'){
+  Vue.prototype.backendInterfaceAddress = 'http://localhost:3030'
+}else {
+  Vue.prototype.backendInterfaceAddress = 'http://101.132.46.146:3030'
 }
 
 Vue.config.productionTip = false
