@@ -1,10 +1,11 @@
 <style>
   .image-text-item{
-    width: 48vw;
+    /*width: 49vw;*/
     background-color: white;
     border-radius: .2rem;
     overflow: hidden;
     margin-top: .1rem;
+    break-inside: avoid;
   }
   .image-text-item>img{
     width: 100%;

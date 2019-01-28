@@ -2,7 +2,8 @@
   #testhome{
     background-color: rgb(244, 244, 244);
     column-count: 2;
-    column-gap: 1em;
+    column-gap: .1rem;
+    padding: .1rem;
   }
 </style>
 <template>
@@ -12,6 +13,7 @@
 </template>
 <script>
   import ImageTextItem from './home/image-text-item'
+  import NotesService from './../service/notes'
   export default {
     components:{
       'image-text-item': ImageTextItem
@@ -19,16 +21,21 @@
     data(){
       return {
         imageTextData: [],
+        fourColumnNotes:[],
         isRander:false
       }
     },
     mounted(){
-      // this.imageTextData = this.testData.fourColumnNotes[0]
-      for (let j=0;j<this.testData.fourColumnNotes.length;j++){
-        for (let i=0;i<this.testData.fourColumnNotes[j].length;i++){
-          this.imageTextData.push(this.testData.fourColumnNotes[j][i])
-        }
-      }
+      NotesService.getAllNotes().then(res=>{
+        console.log(res)
+        this.imageTextData = res.data
+        // this.fourColumnNotes = res.data
+        // for (let j=0;j<this.fourColumnNotes.length;j++){
+        //   for (let i=0;i<this.fourColumnNotes[j].length;i++){
+        //     this.imageTextData.push(this.fourColumnNotes[j][i])
+        //   }
+        // }
+      });
 
       this.isRander = true
     }

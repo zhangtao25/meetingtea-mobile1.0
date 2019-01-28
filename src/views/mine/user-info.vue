@@ -4,9 +4,14 @@
     justify-content: space-between;
     padding: .3rem .4rem;
   }
+  .user-info>.head-portrait{
+    border-radius: 50%;
+    overflow: hidden;
+  }
   .user-info>.head-portrait img{
     width: 2rem;
     height: 2rem;
+    display: block;
   }
   .user-info>.right>.indicators{
     display: flex;
@@ -37,22 +42,23 @@
     margin-top: .3rem;
   }
   .user-info>.right>.personal-info-and-settings>li:nth-child(1){
-    border: 1px solid #333333;
-    border-radius: .3rem;
-    height: .6rem;
+    border: 0.5px solid #333333;
+    border-radius: .35rem;
+    height: .7rem;
     width: 5.1rem;
     text-align: center;
-    line-height: .6rem;
-    font-weight: bolder;
+    line-height: .7rem;
+    box-sizing:border-box;
     margin-right: .2rem;
   }
   .user-info>.right>.personal-info-and-settings>li:nth-child(2){
     width: .8rem;
-    border-radius: .3rem;
-    height: .6rem;
+    border-radius: .35rem;
+    height: .7rem;
     border: 1px solid #333333;
+    box-sizing:border-box;
     text-align: center;
-    line-height: .6rem;
+    line-height: .7rem;
   }
   .user-info>.right>.personal-info-and-settings>li:nth-child(2) .icon-shezhi{
     font-size: .4rem;

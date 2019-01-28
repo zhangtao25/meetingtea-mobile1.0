@@ -5,7 +5,7 @@
     padding: .2rem;
     font-size: .2rem;
     align-items: center;
-    border-bottom: 1px solid #e6e6e6;
+    /*border-bottom: 1px solid #e6e6e6;*/
   }
   .mine-header i{
     font-size: .5rem;
@@ -22,10 +22,23 @@
     font-size: .28rem;
     color: #999;
   }
+  .scale {
+    position: relative;
+  }
 
+  .scale:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid #e6e6e6;
+    transform: scaleY(.3);/*将边框线沿着垂直方向缩小到0.3倍*/
+    transform-origin: 0 bottom;/*因为是下边框线，所以沿着底部靠齐*/
+  }
 </style>
 <template>
-  <div class="mine-header">
+  <div class="mine-header scale">
     <i class="icon-liebiao iconfont"></i>
     <div>
       <p class="nickname">张涛</p>

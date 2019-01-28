@@ -4,7 +4,7 @@ if (process.env.NODE_ENV === 'development'){
 } else {
   proxyTarget = 'http://101.132.46.146:3030'
 }
-// console.log(proxyTarget)
+
 module.exports = {
   publicPath: '/',
   devServer: {
